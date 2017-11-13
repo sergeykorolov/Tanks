@@ -1,24 +1,12 @@
 package com.torrens.main;
 
-import com.torrens.display.Display;
-
-import javax.swing.*;
-import java.awt.event.ActionEvent;
+import com.torrens.game.Game;
 
 public class Main {
 
-    public static void main(String[] args) {
-        Display display = new Display();
-        display.create(800,600,"Tanks");
+    public static void main(String[] args){
 
-        Timer t = new Timer(1000 / 400, new AbstractAction() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                display.render();
-            }
-        });
-
-        t.setRepeats(true);
-        t.start();
+        Game tanks = new Game();
+        tanks.start();
     }
 }
